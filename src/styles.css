@@ -510,7 +510,7 @@ em.very-em {
 .gr-row * {
   margin: 0;
 }
-,
+
 footer,
 header,
 main,
@@ -734,11 +734,7 @@ ul.flex-row {
     max-width: 16.66667%;
   }
 }
-@font-face {
-  font-family: icons;
-  font-weight: 400;
-  font-style: normal;
-}
+
 [data-icon]:before {
   content: attr(data-icon);
 }
@@ -754,7 +750,7 @@ ul.flex-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -1260,7 +1256,6 @@ input[type="submit"].button-cta-outline {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -2751,7 +2746,6 @@ img.staff-img {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -2826,7 +2820,7 @@ img.staff-img {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -3443,7 +3437,7 @@ img.staff-img {
   font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
-  speak: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -4457,7 +4451,6 @@ main section.faqs-section > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -4891,7 +4884,6 @@ main section.faqs-section > .gr-row {
   font-feature-settings: normal;
   font-variant: normal;
   text-transform: none;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -5891,7 +5883,6 @@ main section.faqs-section > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -6393,7 +6384,6 @@ main section.faqs-section > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -6908,7 +6898,6 @@ main section.faqs-section > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -7612,7 +7601,7 @@ main section#landing-content section#reviews > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -7983,7 +7972,6 @@ main section.service-boxes > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2ea39d;
@@ -8074,7 +8062,7 @@ main section.service-boxes > .gr-row {
   font-feature-settings: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -8710,11 +8698,7 @@ main section.trusted-headlines-section > .gr-row {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url(
-    https://res.cloudinary.com/worldremit/image/upload/c_scale,
-    q_60,
-    w_720/images/mastheads/TVC-Dec-2017/Video_BG.jpg
-  );
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -9747,7 +9731,6 @@ main.countryv3-template section.bottom-cta > .gr-row {
   padding: 0;
 }
 .pay-with-debit-or-cr {
-  height: 2.3125rem;
   font-size: 1.75rem;
   font-weight: 600;
   font-style: normal;
@@ -10412,7 +10395,6 @@ main.countryv3-template section.bottom-cta > .gr-row {
     margin-top: 15px;
   }
   #login-box .cta + a {
-    float: right;
     display: inline;
   }
 }
