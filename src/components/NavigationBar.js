@@ -84,9 +84,15 @@ const NavigationBar = () => {
         </nav>
       </header>
 
-      <Route exact path="/" component={Home} />
-      <Route path="/signup/" component={SignUp} />
-      <Route path="/login/" component={LogIn} />
+      <div id="app">
+        <div className="top-sticky-container sticky-generic-error in-background">
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route path="/signup/" component={SignUp} />
+            <Route path="/login/" component={LogIn} />
+          </main>
+        </div>
+      </div>
     </Router>
   );
 };

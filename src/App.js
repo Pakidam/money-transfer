@@ -5,13 +5,7 @@ import NavigationBar from "./components/NavigationBar";
 import "./styles.css";
 
 function App() {
-  return (
-    <div className="App">
-      <body>
-        <NavigationBar />
-      </body>
-    </div>
-  );
+  return <NavigationBar />;
 }
 
 export default App;
