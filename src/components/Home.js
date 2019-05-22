@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import "../styles.css";
-import CountriesList from "./CountriesList";
+import Countries from "../resources/Countries";
 
 const Home = () => {
-  const [country, setCountry] = useState(0);
+  const [selectedCountry, setCountry] = useState(0);
 
   return (
     <main id="home">
@@ -12,10 +12,11 @@ const Home = () => {
         <div className="content">
           <form id="send-to-form" className="clearfix">
             <div className="custom-select">
-              <span>Choose a country to send to</span>
-              <select id="selectTo" name="select-destination" onChange={(e)=>setCountry(e.value)}>
-                <option value="0">Choose a country to send to</option>
-                <CountriesList />
+              <span>Choose a country to send to </span>
+              <select id="selectTo" name="select-destination" onChange={(e)=>{setCountry(e.target.value)}} value={selectedCountry}>
+                {Countries.map(
+                  (c) => <option value={c.value}>{c.name}</option>
+                )}
               </select>
             </div>
 
