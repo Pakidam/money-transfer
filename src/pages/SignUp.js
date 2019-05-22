@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles.css";
-import CountriesList from "./CountriesList";
+import CountriesList from "../components/CountriesList";
 
 const SignUp = () => {
   return (

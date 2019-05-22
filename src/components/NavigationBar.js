@@ -1,7 +1,7 @@
 import React from "react";
-import SignUp from "./SignUp";
-import LogIn from "./LogIn";
-import Home from "./Home";
+import SignUp from "../pages/SignUp";
+import LogIn from "../pages/LogIn";
+import Home from "../pages/Home";
 import CountriesList from "./CountriesList";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles.css";

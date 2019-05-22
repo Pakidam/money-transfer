@@ -1,5 +1,5 @@
 import React from "react";
-import CountriesList from "./CountriesList";
+import CountriesList from "../components/CountriesList";
 import "../styles.css";
 
 const Login = () => {
