@@ -24,16 +24,23 @@ class SignUp1 extends Component {
     const { firstName, middleName, lastName, password, email } = this.state;
     const isValid = this.validate();
     if (isValid) {
-      axios.post("/users", {
-        sending_country: "United Kingdom",
-        first_name: firstName,
-        middle_name: middleName,
-        last_name: lastName,
-        email: email,
-        password: password,
-        marketing_preference: true
-      });
-      this.props.history.push("/signup2");
+      axios
+        .post("/users", {
+          sending_country: "United Kingdom",
+          first_name: firstName,
+          middle_name: middleName,
+          last_name: lastName,
+          email: email,
+          password: password,
+          marketing_preference: true
+        })
+        .then(response => {
+          console.log(response);
+        })
+        .then(error => {
+          console.log(error);
+        });
+      this.props.history.push("/LogIn");
     }
   };
 
@@ -67,16 +74,7 @@ class SignUp1 extends Component {
   };
 
   handleSubmit = event => {
-    // event.preventDefault();
-    /*axios.post("/users", {
-      sending_country: "United Kingdom",
-      first_name: "firstName",
-      middle_name: "middleName",
-      last_name: "lastName",
-      email: "email",
-      marketing_preference: true
-    });
-    */
+    event.preventDefault();
   };
 
   render() {
@@ -95,7 +93,7 @@ class SignUp1 extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         <span>Send From </span>
-        <DropdownCountries />
+        <DropdownCountries value="ca" />
         <br />
 
         <span>Your full name </span>

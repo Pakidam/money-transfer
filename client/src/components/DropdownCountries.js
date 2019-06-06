@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Dropdown } from "semantic-ui-react";
 
 const countryOptions = [
@@ -40,10 +40,11 @@ const countryOptions = [
   { key: "tc", value: "tc", flag: "tc", text: "Caicos Islands" },
   { key: "kh", value: "kh", flag: "kh", text: "Cambodia" },
   { key: "cm", value: "cm", flag: "cm", text: "Cameroon" },
-  { key: "ca", value: "ca", flag: "ca", text: "Canada" }
+  { key: "ca", value: "ca", flag: "ca", text: "Canada" },
+  { key: "uk", value: "uk", flag: "uk", text: "United Kingdom" }
 ];
 
-const DropdownCountries = () => (
+/*const DropdownCountries = () => (
   <Dropdown
     placeholder="Select Country"
     fluid
@@ -52,5 +53,26 @@ const DropdownCountries = () => (
     options={countryOptions}
   />
 );
+*/
+
+const DropdownCountries = () => {
+  const [name, setCountry] = useState("uk");
+
+  const handleCountryChange = e => {
+    setCountry(e.target.value);
+  };
+
+  return (
+    <Dropdown
+      placeholder="Select Country"
+      fluid
+      search
+      selection
+      options={countryOptions}
+      value={name}
+      onChange={handleCountryChange}
+    />
+  );
+};
 
 export default DropdownCountries;
