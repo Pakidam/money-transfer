@@ -93,7 +93,7 @@ class SignUp1 extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         <span>Send From </span>
-        <DropdownCountries value="ca" />
+        <DropdownCountries />
         <br />
 
         <span>Your full name </span>

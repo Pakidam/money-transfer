@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { Dropdown } from "semantic-ui-react";
+import { connect } from "react-redux";
 
 const countryOptions = [
   { key: "af", value: "af", flag: "af", text: "Afghanistan" },
@@ -53,15 +54,9 @@ const countryOptions = [
     options={countryOptions}
   />
 );
-*/
+
 
 const DropdownCountries = () => {
-  const [name, setCountry] = useState("uk");
-
-  const handleCountryChange = e => {
-    setCountry(e.target.value);
-  };
-
   return (
     <Dropdown
       placeholder="Select Country"
@@ -69,10 +64,51 @@ const DropdownCountries = () => {
       search
       selection
       options={countryOptions}
-      value={name}
-      onChange={handleCountryChange}
+      value="uk"
     />
   );
 };
+*/
 
-export default DropdownCountries;
+class DropdownCountries extends Component {
+  /*constructor(props) {
+    super(props);
+    this.state = {
+      value: "uk"
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  */
+
+  /*
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+  */
+
+  handleChange = () => {
+    this.props.dispatch({ type: "SELECTCOUNTRY" });
+  };
+
+  render() {
+    return (
+      <Dropdown
+        placeholder="Select Country"
+        fluid
+        search
+        selection
+        options={countryOptions}
+        value={this.props.value}
+        onChange={this.handleChange}
+      />
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    value: state.value
+  };
+};
+
+export default connect(mapStateToProps)(DropdownCountries);
