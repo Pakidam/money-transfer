@@ -7,11 +7,11 @@ const initialState = {
   value: "uk"
 };
 
-const reducer = (state = initialState, action, event) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "SELECTCOUNTRY":
       return {
-        value: event.target.value
+        country: action.payload.country
       };
     default:
       return state;

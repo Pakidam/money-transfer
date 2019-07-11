@@ -45,18 +45,13 @@ const countryOptions = [
   { key: "uk", value: "uk", flag: "uk", text: "United Kingdom" }
 ];
 
-/*const DropdownCountries = () => (
-  <Dropdown
-    placeholder="Select Country"
-    fluid
-    search
-    selection
-    options={countryOptions}
-  />
-);
+const DropdownCountries = ({ country, dispatch }) => {
+  /*
+  handleChange = () => {
+    this.props.dispatch({ type: "SELECTCOUNTRY" });
+  };
+  */
 
-
-const DropdownCountries = () => {
   return (
     <Dropdown
       placeholder="Select Country"
@@ -64,46 +59,19 @@ const DropdownCountries = () => {
       search
       selection
       options={countryOptions}
-      value="uk"
+      value={country}
+      //onChange={this.handleChange}
+      onChange={(event, { value }) =>
+        dispatch({
+          type: "SELECT_COUNTRY",
+          payload: {
+            country: value
+          }
+        })
+      }
     />
   );
 };
-*/
-
-class DropdownCountries extends Component {
-  /*constructor(props) {
-    super(props);
-    this.state = {
-      value: "uk"
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-  */
-
-  /*
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-  */
-
-  handleChange = () => {
-    this.props.dispatch({ type: "SELECTCOUNTRY" });
-  };
-
-  render() {
-    return (
-      <Dropdown
-        placeholder="Select Country"
-        fluid
-        search
-        selection
-        options={countryOptions}
-        value={this.props.value}
-        onChange={this.handleChange}
-      />
-    );
-  }
-}
 
 const mapStateToProps = state => {
   return {
