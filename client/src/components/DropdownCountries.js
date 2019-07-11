@@ -70,45 +70,23 @@ const DropdownCountries = () => {
 };
 */
 
-class DropdownCountries extends Component {
-  /*constructor(props) {
-    super(props);
-    this.state = {
-      value: "uk"
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-  */
-
-  /*
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-  */
-
-  handleChange = () => {
-    this.props.dispatch({ type: "SELECTCOUNTRY" });
-  };
-
-  render() {
-    return (
-      <Dropdown
-        placeholder="Select Country"
-        fluid
-        search
-        selection
-        options={countryOptions}
-        value={this.props.value}
-        onChange={this.handleChange}
-      />
-    );
-  }
+const DropdownCountries = ({country, dispatch}) => {
+  return (
+    <Dropdown
+      placeholder="Select Country"
+      fluid
+      search
+      selection
+      options={countryOptions}
+      value={country}
+      onChange={(event, { value }) => dispatch({ type: "SELECT_COUNTRY", payload: { country: value }})}
+    />
+  );
 }
 
-const mapStateToProps = state => {
-  return {
-    value: state.value
-  };
-};
+const mapStateToProps = state => ({
+    country: state.country
+});
+
 
 export default connect(mapStateToProps)(DropdownCountries);
