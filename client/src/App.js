@@ -4,14 +4,18 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 const initialState = {
-  country: "uk"
+  fromCountry: "uk"
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SELECTCOUNTRY":
+    case "SET_FROM_COUNTRY":
       return {
-         country: action.payload.country
+         fromCountry: action.payload.country
+      };
+    case "SET_To_COUNTRY":
+      return {
+          toCountry: action.payload.country
       };
     default:
       return state;

@@ -6,7 +6,7 @@ import Home from "../pages/Home";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
-import DropdownCountries from "./DropdownCountries";
+import DropdownCountries from "./DropdownCountriesFrom";
 import LanguageList from "./LanguageList";
 
 class NavigationBar extends Component {
@@ -41,25 +41,27 @@ class NavigationBar extends Component {
             <LanguageList />
           </Menu.Item>
 
-          <Menu.Item
-            as={Link}
-            to="/login/"
-            name="login"
-            active={activeItem === "login"}
-            onClick={this.handleItemClick}
-          >
-            <Link to="/login/">Login</Link>
-          </Menu.Item>
+          <div class="right menu">
+            <Menu.Item
+              as={Link}
+              to="/login/"
+              name="login"
+              active={activeItem === "login"}
+              onClick={this.handleItemClick}
+            >
+              <Link to="/login/">Login</Link>
+            </Menu.Item>
 
-          <Menu.Item
-            as={Link}
-            to="/signup1/"
-            name="signup1"
-            active={activeItem === "signup1"}
-            onClick={this.handleItemClick}
-          >
-            Signup
-          </Menu.Item>
+            <Menu.Item
+              as={Link}
+              to="/signup1/"
+              name="signup1"
+              active={activeItem === "signup1"}
+              onClick={this.handleItemClick}
+            >
+              Signup
+            </Menu.Item>
+          </div>
         </Menu>
 
         <Route exact path="/" component={Home} />
